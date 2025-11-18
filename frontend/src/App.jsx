@@ -17,13 +17,13 @@ const TopNav = () => {
     navigate("/");
   };
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", padding: 12 }}>
-      <div>
-        <Link to="/dashboard">Dashboard</Link>
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: 12 }}>
+      <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+        <strong style={{ fontSize: 18 }}>App</strong>
       </div>
-      <div>
-        <span style={{ marginRight: 12 }}>{user?.name || user?.email}</span>
-        <button onClick={handleLogout}>Logout</button>
+      <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+        <span style={{ marginRight: 8 }}>{user?.name || user?.email}</span>
+        <button onClick={handleLogout} className="btn">Logout</button>
       </div>
     </div>
   );
