@@ -1,0 +1,159 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Ensure dashboard/card block is vertically centered when small enough */
+.page-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.card {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+}
+.card-title {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.card-value {
+  font-size: 1.6rem;
+  margin-top: 6px;
+}
+.card-primary { background: linear-gradient(90deg, rgba(99,102,241,0.12), rgba(99,102,241,0.06)); }
+.card-accent { background: linear-gradient(90deg, rgba(20,184,166,0.08), rgba(20,184,166,0.03)); }
+.card-muted { background: linear-gradient(90deg, rgba(148,163,184,0.04), rgba(148,163,184,0.02)); }
+
+.chart {
+  background: rgba(255,255,255,0.02);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.table-wrapper { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table th, .data-table td { padding: 8px 10px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.03); }
+
+/* Auth (login / register) */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(36,36,36,1) 0%, rgba(27,27,27,1) 100%);
+}
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg, rgba(255,255,255,0.03));
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  color: inherit;
+}
+.auth-card h1 { margin: 0 0 12px 0; font-size: 1.6rem; }
+.auth-form { display: grid; gap: 12px; }
+.auth-form label { display: flex; flex-direction: column; font-size: 0.9rem; gap: 6px; }
+.auth-form input { padding: 10px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); background: rgba(0,0,0,0.2); color: inherit; }
+.auth-form .actions { display:flex; gap:8px; align-items:center; }
+.btn { border-radius: 8px; border: 1px solid transparent; padding: 0.6em 1.2em; font-size: 1rem; cursor: pointer; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn.primary { background: linear-gradient(90deg,#6366f1,#8b5cf6); color: white; border: none; }
+.auth-link { color: #9aa3ff; text-decoration: none; }
+
+/* Top navigation */
+.topnav { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 24px; background: transparent; }
+.topnav a { color: inherit; text-decoration: none; font-weight:600; margin-right:12px }
+
+/* Dashboard tweaks */
+.container { padding: 24px; max-width: 1000px; margin: 0 auto; }
+.cards { display:flex; gap:12px; margin-bottom:18px; }
+.card { flex:1; padding:14px; border-radius:10px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow: 0 6px 12px rgba(0,0,0,0.35); }
+.card-title { font-size:0.9rem; color: #cfd8ff; }
+.card-value { font-size:1.5rem; margin-top:8px; font-weight:700; }
+.chart { padding:12px; border-radius:8px; background: rgba(0,0,0,0.02); }
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
